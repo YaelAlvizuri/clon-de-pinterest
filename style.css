@@ -14,17 +14,21 @@ nav {
     position: sticky; /* Para pomer un sticky, se debe de seleccionar desde donde arranca con top o bottom*/
     top: 0px;
     background-color: #fff;
+    margin: 0 1%;
 }
 
 .container-menu {
-    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    margin-top: 0;
-    margin: 0 20px;
-    gap: 10px;
+}
+
+.div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 input {
@@ -34,8 +38,9 @@ input {
     border-radius: 40px;
 }
 
-li:nth-child(5) {
-    flex-grow: 0.8;
+
+.div:nth-child(2) {
+    flex-grow: 0.8
 } /* El nth es importante para seleccionar un elemento hijo del flexbox container y usando el flex-grow, cambiar su tamaño */
 
 .icon {
