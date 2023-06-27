@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* nav */
+
+nav {
+    position: sticky; /* Para pomer un sticky, se debe de seleccionar desde donde arranca con top o bottom*/
+    top: 0px;
+    background-color: #fff;
+}
+
+.container-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 0;
+    margin: 0 20px;
+    gap: 10px;
+}
+
+input {
+    background-color: #d5d5d5;
+    width: 100%; /* El poner un porcentaje es para mostrar en todos los tamaños de pantalla la misma relación */
+    height: 35px;
+    border-radius: 40px;
+}
+
+li:nth-child(5) {
+    flex-grow: 0.8;
+} /* El nth es importante para seleccionar un elemento hijo del flexbox container y usando el flex-grow, cambiar su tamaño */
+
+.icon {
+    width: 40px;
+}
+
+.profile {
+    border-radius: 20px;
+}
+
+
+/* Content */
+
+.container {
+    max-width: 1440px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.col {
+    flex: 15%; /* flex sirve para determinar el porcentaje de espacio que va a tener cada elemento */
+    padding: 0 5px; /* Aqui el padding nos ayudo a rellenar el contenedor */
+    }
+/* No olvidar que esta primera col es para el tamaño en el escritorio o pc */
+
+.col img {
+    margin-top: 5px;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Hovers */
+
+figure {
+    position: relative;
+    height: 80%;
+    cursor: pointer;
+    width: 80%;
+    overflow: visible;
+    border-radius: 5px;
+    display: flex;
+}
+
+figure img {
+    width: 100%;
+    transition: all 400ms ease-out;
+    will-change: transform;
+}
+
+figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #000;
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: right;
+}
+
+
+/* Para hacer adaptable el diseño a los celulares vienen las media queries*/
+@media (max-width: 1600px) {
+
+    .col {
+        flex: 25%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .col {
+        flex: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .col {
+        flex: 100%;
+    }
+}
+
+
