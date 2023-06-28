@@ -17,25 +17,34 @@ nav {
     margin: 0 1%;
 }
 
-.container-menu {
+#navbar-pinterest {
+    position: fixed ;
+    z-index: 1;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    font-family: sans-serif;
 }
 
-.div {
+.p-icon {
+    margin-left: 20px;
+    margin-left: 10px;
+}
+
+.search-bar {
     display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-input {
     background-color: #d5d5d5;
     width: 100%; /* El poner un porcentaje es para mostrar en todos los tamaños de pantalla la misma relación */
     height: 35px;
     border-radius: 40px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
 }
 
 
