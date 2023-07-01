@@ -33,6 +33,7 @@ nav {
 .p-icon {
     margin-left: 20px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .inicio .text{ 
@@ -46,6 +47,7 @@ nav {
     border-radius: 40px;
     padding: 15px 16px;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -87,16 +89,19 @@ input:focus {
     background-color: #e5e5e5;
 }
 
+#navbar-pinterest h3{
+    cursor: pointer;
+}
 
 .icons {
     display: flex;
     gap: 10px;
 }
 
-
-.div:nth-child(2) {
-    flex-grow: 0.8
+.icons img {
+    cursor: pointer;
 }
+
 
 /* El nth es importante para seleccionar un elemento hijo del flexbox container y usando el flex-grow, cambiar su tamaño */
 
@@ -116,7 +121,7 @@ input:focus {
 /* Content */
 
 .container {
-    max-width: 1440px;
+    max-width: 12 40px;
 }
 
 .row {
@@ -126,7 +131,7 @@ input:focus {
 }
 
 .col {
-    flex: 15%;
+    flex: 10%;
     /* flex sirve para determinar el porcentaje de espacio que va a tener cada elemento */
     padding: 0 5px;
     /* Aqui el padding nos ayudo a rellenar el contenedor */
@@ -174,7 +179,7 @@ img {
     border-radius: 40px;
     padding: 15px 20px;
     border: none;
-    background-color: red;
+    background-color: rgb(188, 32, 32);
     color: white;
     align-self: flex-end;
     cursor: pointer;
