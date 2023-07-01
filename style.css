@@ -11,14 +11,14 @@ body {
 /* nav */
 
 nav {
-    position: sticky; /* Para pomer un sticky, se debe de seleccionar desde donde arranca con top o bottom*/
+    position: sticky;
+    /* Para pomer un sticky, se debe de seleccionar desde donde arranca con top o bottom*/
     top: 0px;
     background-color: #fff;
     margin: 0 1%;
 }
 
 #navbar-pinterest {
-    position: fixed ;
     z-index: 1;
     left: 0;
     right: 0;
@@ -34,12 +34,29 @@ nav {
     margin-left: 10px;
 }
 
+.r-button {
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 15px 20px;
+    border: none;
+}
+
 .search-bar {
     display: flex;
     background-color: #d5d5d5;
-    width: 100%; /* El poner un porcentaje es para mostrar en todos los tamaños de pantalla la misma relación */
+    width: 100%;
+    /* El poner un porcentaje es para mostrar en todos los tamaños de pantalla la misma relación */
     height: 35px;
     border-radius: 40px;
+}
+
+.finder {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
 }
 
 .icons {
@@ -50,7 +67,9 @@ nav {
 
 .div:nth-child(2) {
     flex-grow: 0.8
-} /* El nth es importante para seleccionar un elemento hijo del flexbox container y usando el flex-grow, cambiar su tamaño */
+}
+
+/* El nth es importante para seleccionar un elemento hijo del flexbox container y usando el flex-grow, cambiar su tamaño */
 
 .icon {
     width: 40px;
@@ -74,9 +93,12 @@ nav {
 }
 
 .col {
-    flex: 15%; /* flex sirve para determinar el porcentaje de espacio que va a tener cada elemento */
-    padding: 0 5px; /* Aqui el padding nos ayudo a rellenar el contenedor */
-    }
+    flex: 15%;
+    /* flex sirve para determinar el porcentaje de espacio que va a tener cada elemento */
+    padding: 0 5px;
+    /* Aqui el padding nos ayudo a rellenar el contenedor */
+}
+
 /* No olvidar que esta primera col es para el tamaño en el escritorio o pc */
 
 .col img {
@@ -88,33 +110,57 @@ img {
     border-radius: 8px;
 }
 
-/* Hovers */
-
-figure {
+/* Hover */
+.card-image {
     position: relative;
-    height: 80%;
-    cursor: pointer;
-    width: 80%;
-    overflow: visible;
-    border-radius: 5px;
-    display: flex;
 }
 
-figure img {
-    width: 100%;
-    transition: all 400ms ease-out;
-    will-change: transform;
-}
-
-figure .capa {
+.card-image .layer {
     position: absolute;
     top: 0;
-    width: 100%;
-    background: #000;
-    transition: all 400ms ease-out;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     opacity: 0;
-    visibility: hidden;
-    text-align: right;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-image:hover .layer {
+    opacity: 1;
+}
+
+.save-button {
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 15px 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.gray-button {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    opacity: 0.7;
+    color: #111111;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -138,5 +184,3 @@ figure .capa {
         flex: 100%;
     }
 }
-
-
