@@ -27,6 +27,7 @@ nav {
     align-items: center;
     padding: 10px 0;
     font-family: sans-serif;
+    gap: 10px;
 }
 
 .p-icon {
@@ -34,30 +35,58 @@ nav {
     margin-left: 10px;
 }
 
+.inicio .text{ 
+    margin: 2px;
+}
+
 .r-button {
     background-color: #111111;
     color: #ffffff;
     font-size: 16px;
     border-radius: 40px;
-    padding: 15px 20px;
+    padding: 15px 16px;
     border: none;
 }
+
 
 .search-bar {
     display: flex;
     background-color: #d5d5d5;
     width: 100%;
     /* El poner un porcentaje es para mostrar en todos los tamaños de pantalla la misma relación */
-    height: 35px;
+    height: 50px;
     border-radius: 40px;
 }
 
-.finder {
+.search-bar input {
     width: 80%;
     background-color: transparent;
     border: none;
     font-size: 17px;
+    cursor: text;
 }
+
+input:focus {
+    outline: none;
+}
+
+.search-bar button img {
+    width: 17px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.search-bar button {
+    margin-left: 5px;
+    padding: 17px 9px;
+    background-color: transparent;
+    border: none;
+}
+
+.search-bar:hover {
+    background-color: #e5e5e5;
+}
+
 
 .icons {
     display: flex;
@@ -72,6 +101,10 @@ nav {
 /* El nth es importante para seleccionar un elemento hijo del flexbox container y usando el flex-grow, cambiar su tamaño */
 
 .icon {
+    width: 35px;
+}
+
+.icon-pinterest {
     width: 40px;
 }
 
@@ -128,7 +161,8 @@ img {
     opacity: 0;
     transition: opacity 0.3s ease;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 9px;
+    margin: 4px 0px;
 }
 
 .card-image:hover .layer {
