@@ -202,7 +202,7 @@ img {
 }
 
 .gray-button {
-    
+
     width: 30px;
     height: 30px;
     background-color: white;
@@ -219,12 +219,6 @@ img {
 
 
 /* Para hacer adaptable el diseño a los celulares vienen las media queries*/
-@media (max-width: 1600px) {
-
-    .col {
-        flex: 25%;
-    }
-}
 
 @media (max-width: 1200px) {
     .col {
